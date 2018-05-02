@@ -40,7 +40,7 @@ To run the simulation please:
 2. Run "pomtc.sim.r" within R. Note that you need to access to several R libraries.
 3. Table 2 contents will be saved as a csv file. 
 
-For the simulation in the paper (n=1000, p=15, q=5, R=3) programs take about an hour to run using R 3.3.3 in a Xeon E5-2680 2.50GHz CPU. Depending on your computer specifications this time might vary. Running time includes simulating the data, estimating the model using 3 MCMC chains and relabeling. In addition to that, traceplots for the original and relabelled chains are also produced and the R session saved. The complete [output](https://cdn.rawgit.com/Cholokiwi/pomtc/b11db481/pomtc.sim.html) is available here in R markdown format.
+For the simulation in the paper (n=1000, p=15, q=5, R=3) programs take about an hour to run using R 3.3.3 in a Xeon E5-2680 2.50GHz CPU. Depending on your computer specifications this time might vary. Running time includes simulating the data, estimating the model using 3 MCMC chains and relabeling. In addition to that, traceplots for the original and relabelled chains are also produced and the R session saved. The complete output is available [here](https://rawgit.com/Cholokiwi/pomtc/master/pomtc.sim.html) in R markdown format.
 
 
 #### References ####
