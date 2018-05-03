@@ -1,8 +1,8 @@
-# Model-based clustering for longitudinal ordinal data #
+# Bayesian model-based clustering for longitudinal ordinal data #
 
 
 ### Computer scripts to reproduce simulation in Costilla et al 2018 ###
-This repository contains the R and C++ binary files to reproduce results presented in Table 2 (section 3.4 Model validation using simulated data). C++ source files are also included for convenience. Scripts run in Linux and Windows 64 bits versions (x86-64).
+This repository contains the R and C++ binary files to reproduce results presented in Table 2 (section 3.4 Model validation using simulated data). C++ source files are also included for convenience. Scripts ONLY run in Linux and Windows (x86-64, ie 64 bits versions).
 
 A brief description of these files can be found below. 
 
@@ -44,7 +44,7 @@ For the simulation in the paper (n=1000, p=15, q=5, R=3) programs take about an 
 
 
 #### References ####
-Costilla, Liu, Arnold, Fernandez (2018). A Bayesian model-based approach to estimate latent groups in longitudinal ordinal data (submitted).
+Costilla, Liu, Arnold, Fernandez (2018). Bayesian model-based clustering for longitudinal ordinal data (submitted).
 
 ### Comments/questions to ###
 Roy Costilla
