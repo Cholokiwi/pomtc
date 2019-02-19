@@ -1,7 +1,7 @@
 # Bayesian model-based clustering for longitudinal ordinal data #
 
 
-### Computer scripts to reproduce simulation in Costilla et al 2018 ###
+### Computer scripts to reproduce simulation in Costilla et al 2019 ###
 This repository contains the R and C++ binary files to reproduce results presented in Table 2 (section 3.4 Model validation using simulated data). C++ source files are also included for convenience. Scripts ONLY run in Linux and Windows (x86-64, ie 64 bits versions).
 
 A brief description of these files can be found below. 
@@ -44,18 +44,17 @@ For the simulation in the paper (n=1000, p=15, q=5, R=3) programs take about an 
 
 
 #### References ####
-Costilla, Liu, Arnold, Fernandez (2018). Bayesian model-based clustering for longitudinal ordinal data (submitted).
+Costilla, Liu, Arnold, and Fernandez (2019). Bayesian model-based clustering for longitudinal ordinal data. Computational Statistics. https://doi.org/10.1007/s00180-019-00872-4
 
 ### Comments/questions to ###
 Roy Costilla
 
 PhD Statistics
 
-Institute for Molecular Biosciences. Univerity of Queensland
+Institute for Molecular Biosciences and Queensland Alliance for Agriculture and Food Innovation. University of Queensland. Brisbane. Australia.
 
-r.costilla@imb.uq.edu.au
+r.costilla@uq.edu.au
 
 https://www.researchgate.net/profile/Roy_Costilla
 
 https://twitter.com/CmRoycostilla
-
