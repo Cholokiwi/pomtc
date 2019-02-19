@@ -2,7 +2,7 @@
 
 
 ### Computer scripts to reproduce simulation in Costilla et al 2019 ###
-This repository contains the R and C++ binary files to reproduce results presented in Table 2 (section 3.4 Model validation using simulated data). C++ source files are also included for convenience. Scripts ONLY run in Linux and Windows (x86-64, ie 64 bits versions).
+This repository contains the R and C++ binary files to reproduce results presented in Table 2 (section 3.4 Model validation using simulated data). C++ source files are also included for convenience. Scripts run in Linux, Windows and Mac OS X (x86-64, i.e. 64 bits versions).
 
 A brief description of these files can be found below. 
 
@@ -22,6 +22,8 @@ Functions to perform all above taks, including loading C++ binaries.
 + Linux: [theta.pomtc.so](https://github.com/Cholokiwi/pomtc/blob/master/theta.pomtc.so), [Zrc_tt.so](https://github.com/Cholokiwi/pomtc/blob/master/Zrc_tt.so)
 
 + Windows: [theta.pomtc.dll](https://github.com/Cholokiwi/pomtc/blob/master/theta.pomtc.dll), [Zrc_tt.dll](https://github.com/Cholokiwi/pomtc/blob/master/Zrc_tt.dll)
+
++ Mac OS X: [theta.pomtc.macosx.so](https://github.com/Cholokiwi/pomtc/blob/master/theta.pomtc.macosx.so), [Zrc_tt.macosx.so](https://github.com/Cholokiwi/pomtc/blob/master/Zrc_tt.macosx.so)
 
 
 *Source files*

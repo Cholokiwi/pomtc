@@ -1,6 +1,6 @@
 // POMtt: theta Rpqp (pdf) for the pomtt  (Transitional POM+column effects)
 // Author : Roy Costilla
-// Version : Feb19
+// Version : Nov16
 
 #include <iostream>
 #include <iomanip>

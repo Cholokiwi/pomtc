@@ -3,7 +3,7 @@
 #       POM+transitional+interactions+time
 #       Functions that implement MH sampler
 #       Roy Costilla
-#       Apr18
+#       Feb19
 #       likelihood in C++ (theta.pomct and Zrc_tt)
 ##############################################################################
 
@@ -36,11 +36,18 @@ pomtc=function(init, mydata, fpar, qpar){
 
 
 # Calculates theta given parameters
-##### If you need to compile again (Rtools) uncomment next line
-# system("R CMD SHLIB theta.pomtc.cpp --clean --preclean")
+##### If you need to compile again (Rtools) uncomment next if/else lines
+# if (Sys.info()[['sysname']]=="Darwin"){
+#   cat("I'm a Mac \n")
+#   system("cp theta.pomtc.cpp theta.pomtc.macosx.cpp")
+#   system("R CMD SHLIB theta.pomtc.macosx.cpp --clean --preclean")
+# } else system("R CMD SHLIB theta.pomtc.cpp --clean --preclean")
+
+# Loading appropriate binary files for OS
 switch(Sys.info()[['sysname']],
        Windows= {dyn.load("theta.pomtc.dll")},
-       Linux  = {dyn.load("theta.pomtc.so") })
+       Linux  = {dyn.load("theta.pomtc.so") },
+       Darwin = {dyn.load("theta.pomtc.macosx.so")})
 if (is.loaded("theta_pomtc") ) cat("function theta_pomtc is loaded", '\n')	
 theta.pomtc <- function(mu, alpha, beta, gamma,fpar) {
   q=fpar$q; p=fpar$p; R=fpar$R
@@ -54,13 +61,19 @@ theta.pomtc <- function(mu, alpha, beta, gamma,fpar) {
 }
 
 # Z for transitional model with column effects
-##### If you need to compile again (Rtools) uncomment next line
-#system("R CMD SHLIB Zrc_tt.cpp --clean --preclean")
+##### If you need to compile again (Rtools) uncomment next if/else lines
+# if (Sys.info()[['sysname']]=="Darwin"){
+#   cat("I'm a Mac \n")
+#   system("cp Zrc_tt.cpp Zrc_tt.macosx.cpp")
+#   system("R CMD SHLIB Zrc_tt.macosx.cpp --clean --preclean")
+# } else system("R CMD SHLIB Zrc_tt.cpp --clean --preclean")
+
+# Loading appropriate binary files for OS
 switch(Sys.info()[['sysname']],
        Windows= {dyn.load("Zrc_tt.dll")},
-       Linux  = {dyn.load("Zrc_tt.so") })
+       Linux  = {dyn.load("Zrc_tt.so") },
+       Darwin = {dyn.load("Zrc_tt.macosx.so")})
 if (is.loaded("Zrc_tt") ) cat("function Zrc_tt is loaded", '\n')	
-
 Z.rc.tt <- function(theta.temp, pi.temp ,fpar, data) {
   n=fpar$n
   p=fpar$p
